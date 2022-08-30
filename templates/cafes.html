@@ -1,0 +1,81 @@
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cafes</title>
+  <!-- bootstrap/ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/styles.2.css">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/cf23b00254.js" crossorigin="anonymous"></script>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@100;400;900&family=Sacramento&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  <!-- tailwind css   -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="p-10">
+  <div class="lg:content-auto">
+    <h1 class="text-3xl font-bold underline text-clifford">
+      CAFES
+    </h1>
+  </div>
+  {% for cafe in cafes %}
+  <div class="flex font-sans pt-5">
+    <div class="flex-none w-48 h-48 relative">
+      <img src={{cafe.img_url}} alt="" class="rounded absolute inset-0 w-full h-full object-cover" loading="lazy" />
+    </div>
+    <form class="flex-auto px-6 pb-6">
+      <div class="flex flex-wrap px-6 pb-6 ">
+        <h1 class="flex-auto text-lg font-semibold text-slate-900">
+          {{ cafe.name }}
+        </h1>
+        <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+          Location: {{ cafe.location }}
+        </div>
+        <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+          Price: {{ cafe.coffee_price }}
+        </div>
+        <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+          Sockets: {{ cafe.has_sockets }}
+        </div>
+        <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+          Toilet: {{ cafe.has_toilet }}
+        </div>
+        <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+          Take Calls: {{ cafe.can_take_calls }}
+        </div>
+        <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+          Seats: {{ cafe.seats }}
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+  {% endfor %}
+
+  <footer class="down-footer">
+    <div class="container-fluid">
+      <a href="https://twitter.com/66houdini">
+        <i class="fa-brands fa-twitter footer-logo"></i>
+      </a>
+      <a href="mailto:oladipupoolatunji272@gmail.com">
+        <i class="fa-solid fa-envelope footer-logo"></i>
+      </a>
+      <a href="https://github.com/66houdini">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <p>Copyright © 2022 Trinity Inc. All rights reserved</p>
+    </div>
+  </footer>
+</body>
+
+</html>
