@@ -25,9 +25,12 @@ a:hover {
 }
 
 .trinity {
-  padding-left: 40px
+  padding-left: 40px;
 }
 
+.Cafes {
+  text-align: center;
+}
 
 .down-footer {
   text-align: center;
@@ -45,8 +48,8 @@ a:hover {
     padding-left: 0;
   }
   body {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
 }
