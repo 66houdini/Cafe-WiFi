@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 import os
 
-uri = os.getenv("DATABASE_URI", "sqlite:///cafes.db")  # or other relevant config var
+uri = os.getenv("DATABASE_URL", "sqlite:///cafes.db")  # or other relevant config var
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 app = Flask(__name__)
